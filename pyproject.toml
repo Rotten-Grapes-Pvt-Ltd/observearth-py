@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "observearth"
+version = "0.1.0"
+description = "Simplifying Earth Observation Data Access from Microsoft Planetary Computer"
+authors = ["Krishna Lodha <krishna@rottengrapes.tech>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "observearth"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pystac-client = "*"
+planetary-computer = "*"
+odc-stac = "*"
+rioxarray = "*"
+xarray = "*"
+numpy = "*"
+matplotlib = "*"
+shapely = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+black = "*"
+isort = "*"
+mypy = "*"
+jupyter = "*"
+mkdocs-material = "*"
+mkdocs-jupyter = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
